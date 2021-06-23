@@ -1,0 +1,43 @@
+--CREATE TABLE [User] (
+--UserName VARCHAR(255) PRIMARY KEY,
+--UserPassport VARCHAR(255),
+--UserAddress VARCHAR(255),
+--UserPhoneNumber VARCHAR(20),
+--UserDOB DATE,
+--UserHotel VARCHAR(255)
+--);
+
+
+
+--CREATE TABLE [Passport] (
+--PassportNumber VARCHAR(255) PRIMARY KEY,
+--EXPDate DATE,
+--PassName VARCHAR(255),
+--PassAddress VARCHAR(255),
+--PasDOB DATE
+--);
+
+--CREATE TABLE [Trip] (
+--HotelStops DATE PRIMARY KEY,
+--TravelMode VARCHAR(255),
+--EndingDestination VARCHAR(255),
+--StartingDesitination VARCHAR(255),
+--StartDate DATE,
+--EndDate DATE,
+--Budget DECIMAL
+--);
+
+--CREATE TABLE [Hotel] (
+--HotelAddress VARCHAR(255) PRIMARY KEY,
+--CostPerNight DECIMAL,
+--[Check-InDates] DATE FOREIGN KEY REFERENCES [Trip](HotelStops),
+--[Check-OutDates] DATE,
+--HotelPhoneNumber VARCHAR (255),
+--GuestName VARCHAR(255) FOREIGN KEY REFERENCES [User](UserName)
+--);
+
+--ALTER TABLE [User]
+--ADD FOREIGN KEY (UserPassport) REFERENCES Passport(PassportNumber);
+
+--ALTER TABLE [Passport]
+--ADD FOREIGN KEY (PassName) REFERENCES [User](UserName);
